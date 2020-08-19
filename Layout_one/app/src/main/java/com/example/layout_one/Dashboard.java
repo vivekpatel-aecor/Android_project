@@ -63,6 +63,7 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
 
         setSupportActionBar(toolbar);
 
+
         //Navigation Drawer Menu
 
         // Hide or Show Items
