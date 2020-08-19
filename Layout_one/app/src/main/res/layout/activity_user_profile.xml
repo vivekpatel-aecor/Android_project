@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:hapticFeedbackEnabled="false"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    android:background="#000000"
+    tools:context=".UserProfile"
+    android:id="@+id/drawer_layout_profile">
+
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:id="@+id/nav_view_profile"
+        app:headerLayout="@layout/header"
+        app:menu="@menu/main_menu"
+        android:layout_gravity="start"/>
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#000000">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#000"
+            android:orientation="vertical">
+
+            <include
+                android:id="@+id/profile_menu"
+                layout="@layout/toolbar" />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:background="#000000"
+                android:padding="20dp">
+
+                <ImageView
+                    android:id="@+id/profile_image"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/logo3" />
+
+                <TextView
+                    android:id="@+id/profile_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/profile_image"
+                    android:fontFamily="@font/bangers"
+                    android:includeFontPadding="false"
+                    android:text="Vivek Patel"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    android:layout_marginStart="10dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/profile_name"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/profile_image"
+                    android:fontFamily="@font/bangers"
+                    android:includeFontPadding="false"
+                    android:text="Developer"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp"
+                    android:layout_marginStart="10dp" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-100dp"
+                android:padding="20dp">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_height="125dp"
+                    android:layout_weight="1"
+                    app:cardBackgroundColor="#434141"
+                    app:cardElevation="10dp"
+                    android:layout_margin="10dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_centerHorizontal="true"
+                            android:src="@drawable/ic_rate" />
+
+                        <TextView
+                            android:id="@+id/payment_label"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:includeFontPadding="false"
+                            android:text="$123"
+                            android:textColor="#FFFFFF"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/payment_desc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/payment_label"
+                            android:layout_centerInParent="true"
+                            android:text="Balance"
+                            android:textColor="#FFFFFF"
+                            android:textSize="14sp" />
+
+
+                    </RelativeLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_height="125dp"
+                    android:layout_weight="1"
+                    app:cardElevation="10dp"
+                    android:background="#434141"
+                    android:layout_margin="10dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#434141">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_centerHorizontal="true"
+                            android:src="@drawable/ic_rate" />
+
+                        <TextView
+                            android:id="@+id/booking_label"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:includeFontPadding="false"
+                            android:text="12"
+                            android:textColor="#FFFFFF"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/booking_desc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/booking_label"
+                            android:layout_centerInParent="true"
+                            android:text="Booking"
+                            android:textColor="#FFFFFF"
+                            android:textSize="14sp" />
+
+
+                    </RelativeLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#000000"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/fullName_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:hint="Full Name"
+                    app:endIconDrawable="@drawable/ic_profile"
+                    android:textColor="#000"
+                    android:textColorHighlight="#FFFFFF"
+                    android:textColorHint="#FFFEFE"
+                    android:textColorLink="#FFFFFF"
+                    android:layout_marginTop="5dp"
+                    app:boxBackgroundColor="#FFFFFF">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="Vivek Patel"
+                        android:textSize="18sp"
+                        android:textColor="#000000"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/email_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:endIconDrawable="@drawable/ic_email"
+                    android:layout_marginBottom="10dp"
+                    android:hint="Email"
+                    android:layout_marginTop="5dp"
+
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:textColor="#FFFFFF"
+                    android:textColorHighlight="#FFFFFF"
+                    android:textColorHint="#FFFEFE"
+                    android:textColorLink="#FFFFFF"
+                    app:boxBackgroundColor="#FFFFFF">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:textColor="#000000"
+                        android:text="vivek@gmail.com" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/mobile_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:hint="Phone No."
+                    android:layout_marginTop="5dp"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    app:endIconDrawable="@drawable/ic_phone"
+                    android:textColor="#FFFFFF"
+                    android:textColorHighlight="#FFFFFF"
+                    android:textColorHint="#FFFEFE"
+                    android:textColorLink="#FFFFFF"
+                    app:boxBackgroundColor="#FFFFFF">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="+91 5252552555"
+                        android:textColor="#000000"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/password_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:hint="Password"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:textColor="#FFFFFF"
+                    android:layout_marginTop="5dp"
+                    app:endIconDrawable="@drawable/ic_lock"
+                    android:textColorHighlight="#FFFFFF"
+                    android:textColorHint="#FFFEFE"
+                    android:textColorLink="#FFFFFF"
+                    app:boxBackgroundColor="#FFFFFF">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="12345679"
+                        android:textColor="#000000"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Button
+                    android:id="@+id/update_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#FFFFFF"
+                    android:fontFamily="@font/bangers"
+                    android:shadowColor="#000"
+                    android:text="Update"
+                    android:textColor="#FFFFFF"
+                    android:textColorHighlight="#FFFFFF"
+                    android:textColorHint="#FFFFFF"
+                    android:textColorLink="#FFFFFF"
+                    app:backgroundTint="#000000"
+                    app:strokeColor="#FFFFFF" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
+</androidx.drawerlayout.widget.DrawerLayout>
