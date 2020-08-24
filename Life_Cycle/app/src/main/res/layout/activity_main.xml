@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    tools:context=".MainActivity">
+
+
+    <Button
+        android:id="@+id/btn_start_service"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="StartService"
+        android:text="Start Service"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
+
+    <Button
+        android:id="@+id/btn_stop_Service"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="StopService"
+        android:text="Stop Service"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
+
+    <Button
+        android:id="@+id/btn_start_IService"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="StartIntentService"
+        android:text="Start Intent Service"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
+
+    <Button
+        android:id="@+id/btn_stop_IService"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="StopIntentService"
+        android:text="Stop Intent Service"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
+
+    <Button
+        android:id="@+id/btn2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:onClick="openActivity3"
+        android:text="new Activity"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/btn1"
+        tools:ignore="MissingConstraints" />
+
+
+
+</LinearLayout>
