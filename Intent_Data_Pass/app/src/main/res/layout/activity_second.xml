@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:gravity="center"
+    tools:context=".SecondActivity">
+
+    <TextView
+        style="@style/TextViews"
+        android:id="@+id/tvTitle"
+        android:gravity="center"
+        android:hint="Title"
+        />
+
+    <TextView
+        style="@style/TextViews"
+        android:id="@+id/tvData"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:hint="Data"
+        />
+
+    <TextView
+        style="@style/TextViews"
+        android:id="@+id/tvInt"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:hint="Number"
+        />
+
+    <Button
+        android:id="@+id/btnSend"
+        android:layout_marginTop="20dp"
+        style="@style/buttons"
+        android:text="Send Date"/>
+</LinearLayout>
