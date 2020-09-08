@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/et1"
+        android:hint="enter name"
+        style="@style/EditTexts"
+        android:textAlignment="center"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="20dp" />
+    <Button
+        android:id = "@+id/alertBox"
+        style="@style/buttons"
+        android:onClick="open"
+        android:text = "Alert Box"/>
+
+    <Button
+        android:id = "@+id/customBox"
+        style="@style/buttons"
+        android:onClick="showCustomDialog"
+        android:text = "Custom Box"/>
+
+    <Button
+        android:id = "@+id/listDialogBox"
+        style="@style/buttons"
+        android:onClick="showListDialog"
+        android:text = "List Dialog Box"/>
+    <Button
+        android:id = "@+id/change_activity"
+        style="@style/buttons"
+        android:onClick="changeActivity"
+        android:text = "Fragment Dialog Box"/>
+    <Button
+        android:id = "@+id/change_activity2"
+        style="@style/buttons"
+        android:onClick="intentDataPage"
+        android:text = "Intent Data Pass"/>
+
+    <TextView
+        style="@style/TextViews"
+        android:id="@+id/dateView"
+        android:hint="Select Date"
+        android:onClick="showDate"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        style="@style/TextViews"
+        android:id="@+id/timeView"
+        android:hint="Select Time"
+        android:onClick="showTime"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:id="@+id/tv1"
+        style="@style/TextViews"
+        android:layout_marginTop="20dp" />
+
+</LinearLayout>
