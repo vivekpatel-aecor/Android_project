@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/text_style"
+        android:title="Text Style"
+        android:orderInCategory="1"
+        >
+        <menu>
+            <group
+                android:id="@+id/text_color_group"
+                android:checkableBehavior="single">
+
+                <item
+                    android:checkable="false"
+                    android:enabled="false"
+                    android:onClick="onColorGroupItemClick"
+                    android:title="Select Text Color" />
+                <item
+                    android:id="@+id/red"
+                    android:onClick="onColorGroupItemClick"
+                    android:title="Red" />
+                <item
+                    android:id="@+id/green"
+                    android:onClick="onColorGroupItemClick"
+                    android:title="Green" />
+                <item
+                    android:id="@+id/blue"
+                    android:onClick="onColorGroupItemClick"
+                    android:title="Blue" />
+            </group>
+
+            <group
+                android:id="@+id/text_size_group"
+                android:checkableBehavior="single">
+
+                <item
+                    android:checkable="false"
+                    android:enabled="false"
+                    android:onClick="onSizeGroupItemClick"
+                    android:title="Select Text Size" />
+                <item
+                    android:id="@+id/large_text"
+                    android:onClick="onSizeGroupItemClick"
+                    android:title="Large" />
+                <item
+                    android:id="@+id/medium_text"
+                    android:onClick="onSizeGroupItemClick"
+                    android:title="Medium" />
+                <item
+                    android:id="@+id/small_text"
+                    android:onClick="onSizeGroupItemClick"
+                    android:title="Small" />
+            </group>
+        </menu>
+    </item>
+
+    <item
+        android:id="@+id/text_bold"
+        android:title="Bold Text"
+        android:orderInCategory="2"
+        />
+    <!-- normal text menu item -->
+    <item
+        android:id="@+id/text_normal"
+        android:title="Normal Text"
+        android:orderInCategory="3"
+        />
+</menu>

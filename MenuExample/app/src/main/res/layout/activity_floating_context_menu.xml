@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/relativeLayout"
+    android:layout_gravity="top"
+    tools:context=".FloatingContextMenu">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/toolbarColor"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        android:id="@+id/toolbar"/>
+
+    <!--    FLOATING CONTEXT MENU VIEW-->
+
+    <TextView
+        android:layout_below="@+id/toolbar"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:padding="10dp"
+        android:id="@+id/floating_context_view"
+        style="@style/ParentTextViews"
+        android:hint="Context menu Text"/>
+
+    <TextView
+        android:layout_below="@+id/floating_context_view"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:padding="10dp"
+        android:text="Vivek"
+        android:id="@+id/group_menu_view"
+        style="@style/ParentTextViews"
+        android:hint="Context menu Text"/>
+
+</RelativeLayout>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="center_horizontal"
+    android:padding="20dp"
+    tools:context=".MainActivity">
+
+    <!--    POP_UP MENU VIEW-->
+
+    <TextView
+        android:id="@+id/pop_up_view"
+        style="@style/ParentTextViews"
+        android:hint="Pop Up Menu" />
+
+    <!--    OPTION MENU VIEW-->
+
+<!--    <TextView-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        android:id="@+id/options_view"-->
+<!--        style="@style/ParentTextViews"-->
+<!--        android:hint="Option Selected Text"/>-->
+
+    <!--    CONTEXT MENU VIEW-->
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:id="@+id/context_view"
+        style="@style/ParentTextViews"
+        android:hint="Context menu Text"/>
+
+<!--  floating context menu Button -->
+    <Button
+        style="@style/ParentButton"
+        android:id="@+id/floating_context_button"
+        android:text="Floating Context Menu"
+        />
+
+    <!--  Action mode context menu Button -->
+    <Button
+        style="@style/ParentButton"
+        android:id="@+id/action_mode_button"
+        android:text="Action Mode Context Menu"
+        />
+
+</LinearLayout>
