@@ -57,7 +57,6 @@ public class DashBoard extends AppCompatActivity {
                 Cursor rs = mydb.getUserInfo(value);
                 rs.moveToFirst();
 
-                id = rs.getString(rs.getColumnIndex(DBHelper.USER_COLUMN_ID));
                 name = rs.getString(rs.getColumnIndex(DBHelper.USER_COLUMN_USERNAME));
                 email = rs.getString(rs.getColumnIndex(DBHelper.USER_COLUMN_EMAIL));
                 password = rs.getString(rs.getColumnIndex(DBHelper.USER_COLUMN_PASSWORD));
