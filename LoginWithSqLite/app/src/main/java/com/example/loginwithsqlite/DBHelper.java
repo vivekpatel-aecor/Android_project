@@ -39,23 +39,23 @@ public class DBHelper extends SQLiteOpenHelper {
         onCreate(db);
     }
 
-    public boolean insertUserInfo(String Name, String Email, String Password, String Phone, String City) {
+    public boolean insertUserInfo(String name, String email, String password, String phone, String city) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
-        contentValues.put("name", Name);
-        contentValues.put("email", Email);
-        contentValues.put("password", Password);
-        contentValues.put("phone", Phone);
-        contentValues.put("city", City);
+        contentValues.put("name", name);
+        contentValues.put("email", email);
+        contentValues.put("password", password);
+        contentValues.put("phone", phone);
+        contentValues.put("city", city);
         ///// check empty field ///////////////////
 
-        if (Name.isEmpty() || Email.isEmpty() || Password.isEmpty() || Phone.isEmpty() || City.isEmpty()) {
+        if (name.isEmpty() || email.isEmpty() || password.isEmpty() || phone.isEmpty() || city.isEmpty()) {
             //    System.out.println("Empty Data");
             return false;
         }
 
         Cursor cursor = db.query(USER_TABLE_NAME, new String[]{"email"},
-                " email=?", new String[]{Email}, null, null, null);
+                " email=?", new String[]{email}, null, null, null);
         int count = cursor.getCount();
         cursor.close();
 
@@ -72,32 +72,32 @@ public class DBHelper extends SQLiteOpenHelper {
 
     }
 
-    public Cursor getUserInfo(String Email) {
+    public Cursor getUserInfo(String email) {
         SQLiteDatabase db = this.getReadableDatabase();
-        System.out.println("DBHelper Email :"+Email);
-        Cursor result = db.rawQuery("select * from userInfo where email = '" + Email +"'", null);
+        System.out.println("DBHelper Email :"+email);
+        Cursor result = db.rawQuery("select * from userInfo where email = '" + email +"'", null);
  //       Cursor result = db.rawQuery("select * from userInfo where email = 'viveksp369@gmail.com'", null);
         result.moveToFirst();
         return result;
     }
 
-    public boolean updateUserInfo(String Name, String Email, String Password, String Phone, String City) {
+    public boolean updateUserInfo(String name, String email, String password, String phone, String city) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
-        contentValues.put("name", Name);
-        contentValues.put("email", Email);
-        contentValues.put("password", Password);
-        contentValues.put("phone", Phone);
-        contentValues.put("city", City);
-        db.update("userInfo", contentValues, "email = ?", new String[]{Email});
+        contentValues.put("name", name);
+        contentValues.put("email", email);
+        contentValues.put("password", password);
+        contentValues.put("phone", phone);
+        contentValues.put("city", city);
+        db.update("userInfo", contentValues, "email = ?", new String[]{email});
         return true;
     }
 
-    public Integer deleteUserInfo(String Email) {
+    public Integer deleteUserInfo(String email) {
         SQLiteDatabase db = this.getWritableDatabase();
         return db.delete("userInfo",
                 "email = ? ",
-                new String[]{Email});
+                new String[]{email});
     }
 
     public boolean login(String email, String password) {
