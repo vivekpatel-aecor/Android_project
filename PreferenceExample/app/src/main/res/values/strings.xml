@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">PreferenceExample</string>
+    <string name="data">Data</string>
+    <string name="storeInformation">Store Information</string>
+    <string name="showInformation">Show Information</string>
+
+<!--   Preference Title -->
+    <string name="userName">UserName</string>
+    <string name="password">Password</string>
+    <string name="settings">Settings</string>
+    <string name="listPreference">List preference</string>
+    <string name="keepMeLoggedIn">Keep me logged in</string>
+
+
+<!-- Preference Summary -->
+    <string name="enterName">Please enter your login username</string>
+    <string name="enterPassword">Please enter your login Password</string>
+    <string name="onOff">On/Off</string>
+    <string name="userNameAndPasswordInformation">Username and Password Information</string>
+    <string name="listPreferenceExample">List Preference Example</string>
+
+</resources>
