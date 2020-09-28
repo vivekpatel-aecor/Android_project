@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UserRegistration">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <EditText
+                android:id="@+id/registerUserName"
+                style="@style/ParentBlackEditText"
+                android:hint="@string/username_hint"
+                android:inputType="text"/>
+
+            <EditText
+                android:id="@+id/registerEmail"
+                style="@style/ParentBlackEditText"
+                android:hint="@string/email_hint"
+                android:inputType="textEmailAddress"/>
+
+            <EditText
+                android:id="@+id/registerPassword"
+                style="@style/ParentBlackEditText"
+                android:hint="@string/password_hint"
+                android:inputType="textPassword"/>
+
+            <EditText
+                android:id="@+id/registerPhone"
+                style="@style/ParentBlackEditText"
+                android:hint="@string/phone_hint"
+                android:inputType="phone"/>
+
+            <EditText
+                android:id="@+id/registerCity"
+                style="@style/ParentBlackEditText"
+                android:hint="@string/city_hint"
+                android:inputType="text"/>
+
+            <Button
+                android:id="@+id/registerBtn"
+                style="@style/WrapButton"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:text="@string/register" />
+
+            <TextView
+                android:id="@+id/moveLogin"
+                style="@style/ParentBlackTextView"
+                android:onClick="moveLoginPage"
+                android:text="@string/backToLogin" />
+        </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:padding="10dp"
+    tools:context=".DashBoard">
+
+    <TextView
+        style="@style/ParentBlackTextView"
+        android:id="@+id/dashBoardTitle"
+        android:text="@string/register"/>
+    <Button
+        style="@style/WrapButton"
+        android:id="@+id/readUser"
+        android:layout_below="@+id/dashBoardTitle"
+        android:layout_marginTop="10dp"
+        android:onClick="showUserInfo"
+        android:text="@string/show"/>
+
+    <Button
+        style="@style/WrapButton"
+        android:id="@+id/updateUser"
+        android:layout_below="@+id/dashBoardTitle"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="10dp"
+        android:onClick="updateUserInfo"
+        android:text="@string/update"
+        android:visibility="invisible"
+        android:layout_alignParentRight="true" />
+
+    <Button
+        style="@style/WrapButton"
+        android:id="@+id/deleteUser"
+        android:layout_below="@+id/updateUser"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="10dp"
+        android:visibility="invisible"
+        android:onClick="deleteUser"
+        android:text="@string/delete"
+        android:layout_alignParentRight="true" />
+
+    <Button
+        style="@style/WrapButton"
+        android:id="@+id/logoutBtn"
+        android:layout_below="@+id/readUser"
+        android:layout_alignParentStart="true"
+        android:onClick="logoutUser"
+        android:layout_marginTop="10dp"
+        android:text="@string/logout"
+        android:layout_alignParentLeft="true" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/logoutBtn"
+        android:layout_gravity="center_vertical"
+        android:padding="10dp">
+
+    <EditText
+        android:id="@+id/dashUserName"
+        style="@style/ParentBlackEditText"
+        android:inputType="text"
+        android:hint="@string/username" />
+
+    <EditText
+        android:id="@+id/dashEmail"
+        style="@style/ParentBlackEditText"
+        android:inputType="textEmailAddress"
+        android:hint="@string/email" />
+
+    <EditText
+        android:id="@+id/dashPassword"
+        style="@style/ParentBlackEditText"
+        android:inputType="textPassword"
+        android:hint="@string/password" />
+
+    <EditText
+        android:id="@+id/dashPhone"
+        style="@style/ParentBlackEditText"
+        android:inputType="number"
+        android:hint="@string/phone" />
+
+    <EditText
+        android:id="@+id/dashCity"
+        style="@style/ParentBlackEditText"
+        android:inputType="text"
+        android:hint="@string/city" />
+    </LinearLayout>
+/</RelativeLayout>

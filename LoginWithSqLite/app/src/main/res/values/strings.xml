@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">LoginWithSqLite</string>
+
+    <!--  Text View String   -->
+    <string name="createAccount">Create Account</string>
+    <string name="dashBoardTitle">This is DashBoard</string>
+    <string name="backToLogin">All ready have an account</string>
+
+    <!--    Edit text string -->
+    <string name="username">UserName</string>
+    <string name="password">Password</string>
+    <string name="email">Email</string>
+    <string name="phone">Phone</string>
+    <string name="city">City</string>
+
+    <!--   hint text  -->
+    <string name="username_hint">Enter User Name</string>
+    <string name="email_hint">Enter Email</string>
+    <string name="password_hint">Enter Password</string>
+    <string name="phone_hint">Enter Phone Number</string>
+    <string name="city_hint">Enter City</string>
+
+    <!-- Button String  -->
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="show">Show</string>
+    <string name="update">Update</string>
+    <string name="logout">Logout</string>
+    <string name="delete">Delete</string>
+
+
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="deleteUser">Are you sure to delete Account?</string>
+    <string name="failedLogin">Login failed. Invalid UserName or Password</string>
+
+</resources>
