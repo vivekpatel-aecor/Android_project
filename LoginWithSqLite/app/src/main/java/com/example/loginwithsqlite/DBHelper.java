@@ -74,7 +74,9 @@ public class DBHelper extends SQLiteOpenHelper {
 
     public Cursor getUserInfo(String Email) {
         SQLiteDatabase db = this.getReadableDatabase();
-        Cursor result = db.rawQuery("select * from userInfo where email=?" + Email, null);
+        System.out.println("DBHelper Email :"+Email);
+        Cursor result = db.rawQuery("select * from userInfo where email = '" + Email +"'", null);
+ //       Cursor result = db.rawQuery("select * from userInfo where email = 'viveksp369@gmail.com'", null);
         result.moveToFirst();
         return result;
     }
