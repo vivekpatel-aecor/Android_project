@@ -12,57 +12,43 @@ import android.widget.TextView;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 public class MainActivity extends AppCompatActivity {
 
-    @BindView(R.id.btnStoreInformation) Button btnStoreInformation;
-    @BindView(R.id.btnShowInformation) Button btnShowInformation;
-    @BindView(R.id.tvPrefs) TextView tvPrefs;
+    @BindView(R.id.tvPrefs)
+    protected TextView tvPrefs;
 
+    protected  String userName, password, listPrefs, builder;
+    protected boolean checkBox;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
-    //    initView();
-        setListener();
+
     }
 
-//    protected void initView() {
-//
-//    }
-
-    protected void setListener() {
-        View.OnClickListener listener = new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                switch (view.getId()) {
-                    case R.id.btnStoreInformation:
-                        Intent intent = new Intent(MainActivity.this, PreferencesActivity.class);
+    @OnClick(R.id.btnStoreInformation)
+    protected void onStoreInformationClicked (){
+        Intent intent = new Intent(MainActivity.this, PreferencesActivity.class);
                         startActivity(intent);
-                        break;
-                    case R.id.btnShowInformation:
-                        displaySharedPreferences();
-                        break;
-                    default:
-                        break;
-                }
-            }
-        };
-        btnStoreInformation.setOnClickListener(listener);
-        btnShowInformation.setOnClickListener(listener);
+    }
+    @OnClick(R.id.btnShowInformation)
+    protected void onShowInformationClicked (){
+        displaySharedPreferences();
     }
 
     private void displaySharedPreferences() {
         SharedPreferences preference = PreferenceManager.getDefaultSharedPreferences(MainActivity.this);
-        String username = preference.getString("username", "Default NickName");
-        String password = preference.getString("password", "Default Password");
-        boolean checkBox = preference.getBoolean("checkBox", false);
-        String listPrefs = preference.getString("listPref", "Default list prefs");
+        userName = preference.getString("username", "Default NickName");
+        password = preference.getString("password", "Default Password");
+        checkBox = preference.getBoolean("checkBox", false);
+        listPrefs = preference.getString("listPref", "Default list prefs");
 
 
-        String builder = "Username:  " + username + "\n" +
+        builder = "Username:  " + userName + "\n" +
                 "Password:  " + password + "\n" +
                 "Keep me logged in:  " + String.valueOf(checkBox) + "\n" +
                 "List preference:  " + listPrefs;
