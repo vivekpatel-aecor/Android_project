@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">StorageExample</string>
+    <string name="insertData">Insert</string>
+    <string name="showData">Show</string>
+    <string name="updateData">Update</string>
+    <string name="deleteData">Delete</string>
+    <string name="createData">Create</string>
+    <string name="title">Title</string>
+    <string name="data">Data</string>
+    <string name="saveImage">Save Image</string>
+    <string name="open">Open</string>
+</resources>

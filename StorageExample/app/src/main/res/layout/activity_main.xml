@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        style="@style/ParentBlackTextView"
+        android:id="@+id/tvTitle"
+        android:layout_alignParentStart="true"
+        android:text="@string/title"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentLeft="true" />
+
+    <EditText
+        android:id="@+id/etTitle"
+        android:layout_alignParentEnd="true"
+        style="@style/ParentBlackEditText"
+        android:layout_gravity="center"
+        android:ems="10"
+        android:layout_marginTop="10dp"
+        android:hint="Write Title"
+        android:inputType="text"
+        android:layout_alignParentRight="true" />
+
+
+    <TextView
+        android:id="@+id/tvData"
+        android:layout_below="@+id/etTitle"
+        style="@style/ParentBlackTextView"
+        android:layout_gravity="center"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp"
+        android:text="@string/data"
+        android:layout_alignParentLeft="true" />
+
+
+    <EditText
+        android:id="@+id/etData"
+        android:layout_alignParentEnd="true"
+        style="@style/ParentBlackEditText"
+        android:layout_below="@+id/etTitle"
+        android:inputType="text"
+        android:layout_gravity="center"
+        android:hint="Write Data"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:layout_alignParentRight="true" />
+
+
+    <Button
+        android:id="@+id/btnInsert"
+        style="@style/WrapButton"
+        android:layout_below="@id/etData"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentStart="true"
+        android:text="@string/insertData"
+        android:layout_alignParentLeft="true" />
+
+    <Button
+        android:id="@+id/btnShow"
+        style="@style/WrapButton"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="30dp"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/etData"
+        android:text="@string/showData"
+        android:layout_alignParentRight="true" />
+
+    <Button
+        android:id="@+id/btnImagePage"
+        style="@style/WrapButton"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/btnInsert"
+        android:onClick="moveToImagePage"
+        android:text="Image Page"/>
+
+</RelativeLayout>
